@@ -641,3 +641,370 @@ table.table .avatar {
     color: var(--bs-white);
     font-weight: 700;
 }
+
+.card-panel {
+    background: #fff;
+    border-radius: 14px;
+    padding: 24px;
+    box-shadow: 0 2px 12px rgba(103, 34, 34, 0.1);
+}
+
+.panel-title {
+    color: #672222;
+    font-weight: 700;
+}
+
+.search-box {
+    position: relative;
+    min-width: 280px;
+}
+
+.search-box i {
+    position: absolute;
+    top: 50%;
+    left: 14px;
+    transform: translateY(-50%);
+    color: #75251C;
+}
+
+.search-box input[type="search"] {
+    width: 100%;
+    border: none;
+    border-radius: 50rem;
+    background: #f5ece3;
+    padding: 10px 16px 10px 40px;
+    outline: none;
+}
+
+.search-box input[type="search"]:focus {
+    box-shadow: 0 0 0 2px #A42424;
+}
+
+.chip-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.chip {
+    border: none;
+    border-radius: 50rem;
+    background: #f5ece3;
+    color: #75251C;
+    padding: 6px 16px;
+    font-size: 0.875rem;
+    text-decoration: none;
+    transition: background 0.2s, color 0.2s;
+}
+
+.chip:hover {
+    background: #ead9c9;
+    color: #75251C;
+}
+
+.chip.active {
+    background: #A42424;
+    color: #fff;
+}
+
+#book-grid {
+    transition: opacity 0.2s;
+}
+
+#book-grid.is-loading {
+    opacity: 0.4;
+    pointer-events: none;
+}
+
+.book-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 20px;
+}
+
+.book-card {
+    cursor: pointer;
+    border-radius: 12px;
+    padding: 8px;
+    outline: none;
+    transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+}
+
+.book-card:hover,
+.book-card:focus-visible {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(103, 34, 34, 0.18);
+}
+
+.book-card.selected {
+    background: #f5ece3;
+    box-shadow: 0 0 0 2px #A42424;
+}
+
+.book-cover {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    aspect-ratio: 3 / 4;
+    border-radius: 10px;
+    padding: 14px;
+    color: #fff;
+    overflow: hidden;
+}
+
+.book-cover::after {
+    content: "";
+    position: absolute;
+    inset: 0 auto 0 0;
+    width: 8px;
+    background: rgba(0, 0, 0, 0.18);
+}
+
+.book-cover-category {
+    font-size: 0.7rem;
+    opacity: 0.85;
+}
+
+.book-cover-title {
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    font-size: 1.05rem;
+    font-weight: 700;
+    line-height: 1.25;
+}
+
+.stock-tag {
+    align-self: flex-start;
+    border-radius: 50rem;
+    padding: 2px 10px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    background: rgba(255, 255, 255, 0.92);
+}
+
+.stock-tag.in {
+    color: #146c43;
+}
+
+.stock-tag.out {
+    color: #b02a37;
+}
+
+.book-meta {
+    padding: 8px 2px 0;
+    color: #5a4a44;
+}
+
+.tone-0 { background: #A42424; }
+.tone-1 { background: #E0A526; color: #3b2a12; }
+.tone-2 { background: #2F6F6A; }
+.tone-3 { background: #3B4A6B; }
+.tone-4 { background: #6B7F3A; }
+.tone-5 { background: #7A3E65; }
+
+.empty-state {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 48px 0;
+    color: #8a7a72;
+}
+
+.empty-state i {
+    display: block;
+    font-size: 2.5rem;
+    margin-bottom: 8px;
+}
+
+.detail-panel {
+    position: sticky;
+    top: 24px;
+    border-radius: 14px;
+    background: #672222;
+    color: #fff;
+    padding: 28px 22px;
+    box-shadow: 0 2px 12px rgba(103, 34, 34, 0.25);
+}
+
+.panel-empty-icon {
+    display: block;
+    font-size: 3rem;
+    opacity: 0.6;
+    margin-bottom: 8px;
+}
+
+.panel-cover {
+    display: flex;
+    align-items: flex-end;
+    width: 60%;
+    aspect-ratio: 3 / 4;
+    margin: 0 auto;
+    border-radius: 10px;
+    padding: 12px;
+    font-weight: 700;
+    line-height: 1.2;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+}
+
+.panel-muted {
+    color: #e6c9c9;
+}
+
+.panel-stats {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 12px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.panel-stats strong {
+    display: block;
+    font-size: 0.95rem;
+}
+
+.panel-stats small {
+    color: #e6c9c9;
+}
+
+.panel-link {
+    display: block;
+    margin-top: 12px;
+    text-align: center;
+    font-size: 0.875rem;
+    color: #f3c98b;
+}
+
+.detail-banner {
+    height: 110px;
+    background: linear-gradient(90deg, #f3c98b, #e8927c);
+}
+
+.detail-body {
+    padding: 0 28px 28px;
+    margin-top: 0;
+}
+
+.detail-cover-wrap {
+    margin-top: -60px;
+}
+
+.detail-cover {
+    aspect-ratio: 3 / 4;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
+}
+
+.detail-cover .book-cover-title {
+    font-size: 1.3rem;
+}
+
+.detail-title {
+    font-weight: 700;
+    color: #3b1414;
+}
+
+.detail-author {
+    color: #7a6a62;
+}
+
+.status-pill {
+    display: inline-block;
+    border-radius: 6px;
+    padding: 3px 10px;
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+.status-pill.ok { background: #d8f0e0; color: #146c43; }
+.status-pill.off { background: #f8d7da; color: #b02a37; }
+.status-pill.warn { background: #fff0c2; color: #8a6100; }
+.status-pill.neutral { background: #f5ece3; color: #75251C; }
+
+.info-list {
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    row-gap: 10px;
+    margin: 0;
+}
+
+.info-list dt {
+    color: #7a6a62;
+    font-weight: 500;
+}
+
+.info-list dd {
+    margin: 0;
+    font-weight: 500;
+}
+
+.borrow-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.borrow-card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    border-radius: 12px;
+    padding: 12px 16px;
+    background: #fbf7f2;
+    transition: box-shadow 0.2s;
+}
+
+.borrow-card:hover {
+    box-shadow: 0 4px 14px rgba(103, 34, 34, 0.15);
+}
+
+.mini-cover {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 56px;
+    height: 74px;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 1.6rem;
+}
+
+.borrow-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.borrow-dates {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 18px;
+    margin-top: 6px;
+    font-size: 0.8rem;
+    color: #5a4a44;
+}
+
+.borrow-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 8px;
+}
+
+@media (max-width: 576px) {
+    .borrow-card {
+        flex-wrap: wrap;
+    }
+
+    .borrow-actions {
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+    }
+
+    .info-list {
+        grid-template-columns: 110px 1fr;
+    }
+}

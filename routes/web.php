@@ -13,13 +13,13 @@ Route::get('/register',function(){
 });
 
 Route::get('/admin/books',function(){
-   return view('books.index'); 
+   return view('admin.books'); 
 });
 Route::get('/admin/borrowings',function(){
-   return view('borrowings.index'); 
+   return view('admin.borrowings'); 
 });
 Route::get('/admin/categories',function(){
-   return view('categories.index'); 
+   return view('admin.categories'); 
 });
 
 Route::get('/home',function(){
