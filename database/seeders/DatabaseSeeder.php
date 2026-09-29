@@ -17,9 +17,21 @@ class DatabaseSeeder extends Seeder
     {
         // User::factory(10)->create();
 
-        User::factory()->create([
-            'name' => 'Test User',
-            'email' => 'test@example.com',
+        User::insert([
+            [
+            'name' => 'Admin',
+            'email' => 'admin@openperpus.local',
+            'password'=>bcrypt('0987654321'),
+            'phone_num'=>'080989999',
+            'role'=>'Admin'
+            ],
+            [
+            'name' => 'Peminjam 1',
+            'email' => 'peminjam1@email.test',
+            'password'=>bcrypt('1234567890'),
+            'phone_num'=>'088888888888',
+            'role'=>'Peminjam'
+            ]
         ]);
     }
 }
