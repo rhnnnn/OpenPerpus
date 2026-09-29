@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    font-family: 'Ubuntu';
+}
+body {
+    height: 100vh;
+    background-image: url('https://raw.githubusercontent.com/rhnnnn/mulmed-sheet/main/pink.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+p {
+    color: rgb(0, 0, 0);
+    padding-top: 10px;
+}
+h1 {
+    text-align: center;
+    /* padding-left: 100px; */
+    padding-bottom: 20px;
+    font-family: 'Raleway';
+}
+a {
+    color: rgb(55, 155, 223);
+}
+.container{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    padding: 20px 25px;
+    max-width: 540px !important;
+    margin: 0 auto;
+
+    background-color: #ffffff;
+    box-shadow: 0 0 10px #ee2e24;
+    border-radius: 20px;
+}
+.container h1{
+    text-align: left;
+    color: 	#ee2e24;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    border-bottom: 3px solid 	#ee2e24;
+}
+.container label{
+    text-align: left;
+    color: #000000;
+}
+.container form {
+    max-width: 540px;
+    margin: 0 auto;
+}
+.container form input{
+    width: calc(100% - 20px);
+    padding: 8px 10px;
+    margin-bottom: 15px;
+    border: none;
+    background-color: transparent;
+    border-bottom: 2px solid 	#ee2e24;
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+}
+.container form button{
+    width: 100%;
+    height: 40px;
+    padding: 5px 0;
+    border: none;
+    background-color:#ee2e24;
+    font-size: 18px;
+    color: #000000;
+    border-radius: 20px;
+}
+.container form button {
+    /* background-image: linear-gradient(to right, #ff6e7f 0%, #bfe9ff  50%, #ff6e7f  100%); */
+    background-image: linear-gradient(to right, #ee2e24 0%, #6d6e71 50%, #ee2e24 100% );
+    margin: 0px;
+    padding: 8px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    display: block;
+  }
+.container form button:hover {
+    background-position: right center;
+    color: #fff;
+    text-decoration: none;
+}
+a.test {
+    color:#ee2e24;
+}
