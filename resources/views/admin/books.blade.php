@@ -89,6 +89,55 @@
 @endsection
 
 @section('modals')
-    @include('books.modals')
+    <x-partials.modal-add id="addBookModal" title="Tambah Buku" :action="url('admin/books')">
+        <div class="mb-3">
+            <label for="add-title" class="form-label">Judul</label>
+            <input type="text" class="form-control" id="add-title" name="title" value="{{ old('title') }}" required>
+        </div>
+        <div class="mb-3">
+            <label for="add-author" class="form-label">Penulis</label>
+            <input type="text" class="form-control" id="add-author" name="author" value="{{ old('author') }}" required>
+        </div>
+        <div class="mb-3">
+            <label for="add-category_id" class="form-label select-label">Kategori</label>
+            <select name="category_id" id="add-category_id" class="form-select" required>
+                @isset($categories)
+                    @foreach ($categories as $category)
+                        <option value="{{ $category->id }}" @selected(old('category_id') == $category->id)>{{ $category->category_name }}</option>
+                    @endforeach
+                @endisset
+            </select>
+        </div>
+        <div class="mb-3">
+            <label for="add-stock" class="form-label">Stok</label>
+            <input type="number" min="0" class="form-control" id="add-stock" name="stock" value="{{ old('stock', 0) }}" required>
+        </div>
+    </x-partials.modal-add>
+
+    <x-partials.modal-edit id="editBookModal" title="Edit Buku">
+        <div class="mb-3">
+            <label for="edit-title" class="form-label">Judul</label>
+            <input type="text" class="form-control" id="edit-title" name="title" value="{{ old('title') }}" required>
+        </div>
+        <div class="mb-3">
+            <label for="edit-author" class="form-label">Penulis</label>
+            <input type="text" class="form-control" id="edit-author" name="author" value="{{ old('author') }}" required>
+        </div>
+        <div class="mb-3">
+            <label for="edit-category_id" class="form-label select-label">Kategori</label>
+            <select name="category_id" id="edit-category_id" class="form-select" required>
+                @isset($categories)
+                    @foreach ($categories as $category)
+                        <option value="{{ $category->id }}" @selected(old('category_id') == $category->id)>{{ $category->category_name }}</option>
+                    @endforeach
+                @endisset
+            </select>
+        </div>
+        <div class="mb-3">
+            <label for="edit-stock" class="form-label">Stok</label>
+            <input type="number" min="0" class="form-control" id="edit-stock" name="stock" value="{{ old('stock', 0) }}" required>
+        </div>
+    </x-partials.modal-edit>
+
     <x-partials.modal-delete id="deleteBookModal" title="Hapus Buku" message="Riwayat peminjaman buku ini juga akan terhapus. Lanjutkan?" />
 @endsection
