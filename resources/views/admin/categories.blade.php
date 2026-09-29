@@ -61,6 +61,19 @@
 @endsection
 
 @section('modals')
-    @include('categories.modals')
+    <x-partials.modal-add id="addCategoryModal" title="Tambah Kategori" :action="url('admin/categories')">
+        <div class="mb-3">
+            <label for="add-category_name" class="form-label">Nama Kategori</label>
+            <input type="text" class="form-control" id="add-category_name" name="category_name" value="{{ old('category_name') }}" required>
+        </div>
+    </x-partials.modal-add>
+
+    <x-partials.modal-edit id="editCategoryModal" title="Edit Kategori">
+        <div class="mb-3">
+            <label for="edit-category_name" class="form-label">Nama Kategori</label>
+            <input type="text" class="form-control" id="edit-category_name" name="category_name" value="{{ old('category_name') }}" required>
+        </div>
+    </x-partials.modal-edit>
+
     <x-partials.modal-delete id="deleteCategoryModal" title="Hapus Kategori" message="Menghapus kategori juga akan menghapus semua buku di dalamnya. Lanjutkan?" />
 @endsection
