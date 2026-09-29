@@ -1,58 +1,92 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+<h1 align="center">AKU Project</h1>
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+## Introduction
+<p align="justify">
+You may wonder, what the hell is AKU stands for, well it stands for
+nothing, we just can't explain it because its an inside jokes. it took 12 years of internet exploration to understand this term.
+
+<p align="justify">
+
+</p>
 </p>
 
-## About Laravel
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## You may ask what the hell is this
+<p align="justify">
+    Made by two teenagers who have only learned 5 days worth of laravel before starting this project. It's a basic Laravel CRUD with quite the features.
+    <p align="justify">
+    This project can handle CRUD operations through random methods, some use ajax, some I dont even know how I made it but it works.
+    </p>
+    <p align="justify">
+    The tables support sorting, pagination, or search data on the table, and you also could import and export the table as excel files.
+    </p>
+</p>
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## Before Installing This Project
 
-## Learning Laravel
+<p align="justify">
+    You need to make sure that you're using PHP 8.1 for the minimum version, then you will need to install some other tools like, Git for cloning this project into your local server directory, Composer for managing php package and installing some others package that will be needed. Also, you should make sure that you have enabled the following php extension in php.ini configuration file, such as:
+</p>
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+- php_zip
+- php_xml
+- php_gd2
+- php_iconv
+- php_simplexml
+- php_xmlreader
+- php_zlib
 
-In addition, [Laracasts](https://laracasts.com) contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## Installation Instruction
 
-You can also watch bite-sized lessons with real-world projects on [Laravel Learn](https://laravel.com/learn), where you will be guided through building a Laravel application from scratch while learning PHP fundamentals.
+1. Clone this project and `cd` into the cloned project by using this following this command:
+   
+   ```shell
+    git clone https://github.com/viernism/aku_crud.git && cd aku_crud
+   ```
 
-## Agentic Development
+2. After that, you'll need to copy `.env.example` into `.env` file and installing components from `composer` by using this following command:
 
-Laravel's predictable structure and conventions make it ideal for AI coding agents like Claude Code, Cursor, and GitHub Copilot. Install [Laravel Boost](https://laravel.com/docs/ai) to supercharge your AI workflow:
+    ```shell
+    cp .env.example .env && composer install
+    ```
 
-```bash
-composer require laravel/boost --dev
+3. Now, after that installing components from `composer` completed, you need to generate key by using this following command:
+   
+   ```bash
+    php artisan key:generate
+   ```
 
-php artisan boost:install
-```
+4. Now, you will need to set up your database. It's better to use database engine like PostgreSQL or MySQL. You can change it on your `.env` file, for example we are using MySQL. then, you can configure it like this, but remember to configure it based on your server settings.
 
-Boost provides your agent 15+ tools and skills that help agents build Laravel applications while following best practices.
+    <img src="https://raw.githubusercontent.com/rhnnnn/mulmed-sheet/main/Screenshot_20230417_103526.png">
 
-## Contributing
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+5. Before migrating the tables, you will need to set up an admin user in user seeder
 
-## Code of Conduct
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+6. Run this following command to migrate all needed table.
+   
+   ```bash
+   php artisan migrate --seed
+   ```
 
-## Security Vulnerabilities
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+7. Don't forget to run this command, so the profile picture upload and other things can work.
 
-## License
+    ```bash
+    php artisan storage:link
+    ```
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+8. And, you can log in using several default accounts below:
+
+    
+        **Admin User**
+        ---
+        - email     : admin@crud.test
+        - password  : 4dM1nistrat0r
+
+        **Basic User**
+        ---
+        - email     : testuser@crud.test
+        - password  : !mT35tUs3R
