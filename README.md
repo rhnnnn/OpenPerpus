@@ -1,27 +1,4 @@
-<h1 align="center">AKU Project</h1>
-
-## Introduction
-<p align="justify">
-You may wonder, what the hell is AKU stands for, well it stands for
-nothing, we just can't explain it because its an inside jokes. it took 12 years of internet exploration to understand this term.
-
-<p align="justify">
-
-</p>
-</p>
-
-
-## You may ask what the hell is this
-<p align="justify">
-    Made by two teenagers who have only learned 5 days worth of laravel before starting this project. It's a basic Laravel CRUD with quite the features.
-    <p align="justify">
-    This project can handle CRUD operations through random methods, some use ajax, some I dont even know how I made it but it works.
-    </p>
-    <p align="justify">
-    The tables support sorting, pagination, or search data on the table, and you also could import and export the table as excel files.
-    </p>
-</p>
-
+<h1 align="center">OpenPerpus</h1>
 
 ## Before Installing This Project
 
