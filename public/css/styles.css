@@ -1008,3 +1008,37 @@ table.table .avatar {
         grid-template-columns: 110px 1fr;
     }
 }
+
+.book-cover.has-image,
+.panel-cover.has-image,
+.mini-cover.has-image {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.book-cover.has-image {
+    justify-content: flex-end;
+}
+
+.book-cover.has-image .book-cover-category,
+.book-cover.has-image .book-cover-title,
+.panel-cover.has-image span,
+.mini-cover.has-image i {
+    display: none;
+}
+
+.book-thumb {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 54px;
+    border-radius: 4px;
+    object-fit: cover;
+}
+
+.book-thumb-empty {
+    background: #f5ece3;
+    color: #a98f85;
+}
