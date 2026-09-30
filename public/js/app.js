@@ -130,10 +130,11 @@ document.addEventListener('DOMContentLoaded', () => {
         document.querySelectorAll('.book-card.selected').forEach(item => item.classList.remove('selected'));
         card.classList.add('selected');
 
-        const { title, author, category, stock, tone, borrowAction, showUrl } = card.dataset;
+        const { title, author, category, stock, tone, image, borrowAction, showUrl } = card.dataset;
         const available = Number(stock) > 0;
 
-        panelCover.className = 'panel-cover tone-' + tone;
+        panelCover.className = 'panel-cover tone-' + tone + (image ? ' has-image' : '');
+        panelCover.style.backgroundImage = image ? 'url("' + image + '")' : '';
         panelCoverTitle.textContent = title;
         panelTitle.textContent = title;
         panelAuthor.textContent = author;
