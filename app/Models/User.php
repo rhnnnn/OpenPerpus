@@ -7,6 +7,7 @@ use Database\Factories\UserFactory;
 use Illuminate\Database\Eloquent\Attributes\Fillable;
 use Illuminate\Database\Eloquent\Attributes\Hidden;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 
@@ -30,7 +31,7 @@ class User extends Authenticatable
         ];
     }
 
-    public function borrowings(){
-        $this->hasMany(Borrowings::class,'user_id','id');
+    public function borrowing():HasMany{
+        return $this->hasMany(Borrowing::class,'user_id','id');
     }
 }
